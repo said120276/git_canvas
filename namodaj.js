@@ -18610,7 +18610,8 @@ p.nominalBounds = new cjs.Rectangle(-271.9,-471,206.49999999999997,467);
 		
 						sbr.getChildByName('f_shapeDraw').graphics.clear();
 					} else {
-						sbr.getChildByName('shapeDraw').graphics.beginStroke(that.tool.color)
+						sh_d = sbr.getChildByName('shapeDraw') ;
+						sh_d.graphics.beginStroke(that.tool.color)
 		
 						.setStrokeStyle(that.tool.isErase ? that.tool.somk * 3 : that.tool.somk
 							// ,that.tool.is_feutre ? "square":
@@ -18620,9 +18621,9 @@ p.nominalBounds = new cjs.Rectangle(-271.9,-471,206.49999999999997,467);
 		
 						.lineTo(pt.x, pt.y);
 		
-						sbr.getChildByName('shapeDraw').updateCache("source-over");
+						sh_d.updateCache("source-over");
 		
-						sbr.getChildByName('shapeDraw').graphics.clear();
+						sh_d.graphics.clear();
 					}
 		
 				}
